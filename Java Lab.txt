@@ -1,0 +1,101 @@
+1.
+Command line instructions
+
+Git global setup
+
+git config --global user.name "bibek.thapaliya"
+git config --global user.email "bibek.thapaliya@student.fh-kiel.de"
+
+Create a new repository
+
+git clone https://gitlab.iue.fh-kiel.de/jrathje/teamMike.git
+cd teamMike
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+3.
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles classes 'main'.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles classes 'test'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. 
+wrapper - Generates Gradle wrapper files. [incubating]All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project. [jar]
+build - Assembles and tests this project. [assemble, check]
+buildDependents - Assembles and tests this project and all projects that depend on it. [build]
+buildNeeded - Assembles and tests this project and all projects it depends on. [build]
+classes - Assembles main classes.
+    compileJava - Compiles main Java source.
+    processResources - Processes main resources.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes. [classes]
+testClasses - Assembles test classes. [classes]
+    compileTestJava - Compiles test Java source.
+    processTestResources - Processes test resources.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code. [classes]
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'teamMike'.
+components - Displays the components produced by root project 'teamMike'. [incubating]
+dependencies - Displays all dependencies declared in root project 'teamMike'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'teamMike'.
+help - Displays a help message.
+model - Displays the configuration model of root project 'teamMike'. [incubating]
+projects - Displays the sub-projects of root project 'teamMike'.
+properties - Displays the properties of root project 'teamMike'.
+tasks - Displays the tasks runnable from root project 'teamMike'.
+
+Verification tasks
+------------------
+check - Runs all checks. [test]
+test - Runs the unit tests. [classes, testClasses]
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+BUILD SUCCESSFUL
+
+Hamcrest is a framework which allows for the software testing.It checks the condition via existing matchers classes
+They are the dependicies files that comes with in the gradle.
+ Explain the difference between the two keywords "compile" and "testcompile" of your build scripts dependencies section.
+ compile is the group of dependencies you need to build your application while testCompile is a group of dependencies that you need only for testing.
+
+4.
+step:
+go to Plugin 
+Click Browser Reprository
+search .ignore
+install .ignore
+
+5.
+Step To add files in git
+i) git add .
+ii)git commit -m "Succed the first and second problem "
+iii)git push origin
